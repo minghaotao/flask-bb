@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+
+        <fieldset class="form-group">
+            <legend>Blackboard Batch course Copy</legend>
+            <hr>
+            <div class="form-group">
+                {% for field in form %}
+
+                {% if field.type == "SelectField" %}
+
+                <b>{{ field.label (class="form-control-label")}}:</b>
+                {{ field (class="form-control")}}
+
+                {% endif %}
+
+                {% endfor %}
+            </div>
+
+            <div class="form-group">
+                {{ form.Orig_courseId.label(class="form-control-label") }}:
+
+                {{ form.Orig_courseId (class="form-control form-control-lg", placeholder="Course ID")}}
+
+            </div>
+            <div class="form-group">
+                {{ form.Dest_courseId.label(class="form-control-label") }}:
+
+                {{ form.Dest_courseId (class="form-control form-control-lg", placeholder="Course ID Per line") }}
+
+
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+
+
+        </fieldset>
+
+
+    </form>
+
+
+</div>
+
+
+{% endblock content %}

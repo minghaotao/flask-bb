@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content%}
+
+<div id="wrapper" align="center">
+     <div class="form-control">
+    <div><h2>{% block header%}{% endblock %}</h2></div>
+    <hr>
+        <h3>
+            {% if courses %}
+                {{ userName }} has been added to the {{ courses }}
+            {% elif course %}
+                {{ userName }} has been added to the {{ course }}
+            {% elif course_id %}
+                Course: {{ course_id }} has been created and Instructor: {{ username }} has added
+            {% elif status %}
+                {% for or_course in Dest_course.split('\r') %}
+                    {{ Origin_course }} has been copied to {{ or_course }}
+                    <br>
+                {% endfor %}
+            {% elif child_course %}
+                {% for child_id in child_course.split('\r') %}
+                    {{ child_id }} has been merged with {{ master_id }}
+                    <br>
+                {% endfor %}
+            {% endif %}
+
+
+        </h3>
+     </div>
+
+</div>
+{% endblock content %}

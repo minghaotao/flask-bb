@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content%}
+<div class="content-section">
+    <div id="container">
+        <fieldset class="form-group">
+            <legend>Batch Enroll Users</legend>
+        <div id="wrapper" align="center">
+
+            <hr>
+            <form action="{{ url_for('batch_enroll') }}" method="post" style="text-align:left">
+
+                <table class="input" align="center">
+
+                    <tr>
+
+                        <td> Course Role</td>
+                        <td>
+                            <select name="role" class="form-control">
+                                <option value="Instructor">Instructor</option>
+                                <option value="TeachingAssistant">Teaching Assistant</option>
+                                <option value="Student">Student</option>
+                            </select>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Username:</td>
+                        <td><input class="form-control" type="text" name="username" placeholder="Put username here"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Course IDs</td>
+                        <td><textarea class="form-control" name="course_id" rows="6" cols="50" required placeholder="One course per Line" ></textarea></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td></td>
+                        <td><input type='submit' value="submit" class="btn btn-outline-info"></td>
+
+                    </tr>
+
+
+                </table>
+            </form>
+
+        </div>
+        </fieldset>
+    </div>
+</div>
+{% endblock content %}

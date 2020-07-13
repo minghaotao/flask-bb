@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+
+        <fieldset class="form-group">
+            <legend>Blackboard Course Merge</legend>
+            <hr>
+            <div class="form-group">
+                {{ form.Course_id.label(class="form-control-label")}}
+                {{ form.Course_id (class="form-control form-control-lg", placeholder="Course ID")}}
+            </div>
+
+            <div class="form-group">
+                {{ form.Course_name.label(class="form-control-label") }}:
+
+                {{ form.Course_name (class="form-control form-control-lg", placeholder="Course Name")}}
+
+            </div>
+            <div class="form-group">
+                {{ form.Child_courses.label(class="form-control-label") }}:
+
+                {{ form.Child_courses (class="form-control form-control-lg", placeholder="Course ID Per line") }}
+
+
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+
+
+        </fieldset>
+
+
+    </form>
+
+
+</div>
+
+
+{% endblock content %}
