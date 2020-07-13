@@ -48,7 +48,7 @@ class Post(db.Model):
 class AdminView(ModelView):
     def is_accessible(self):
         # return current_user.is_authenticated
-        return current_user.username == 'm_tao'
+        return current_user.username == ''
 
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('login'))
