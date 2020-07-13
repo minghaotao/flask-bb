@@ -8,8 +8,8 @@ class Blackboard(object):
     def __init__(self, cred=None, token=None):
 
         learn_urls = {
-            'Staging': 'https://fhsu-testmigsaas.blackboard.com/',
-            'Production': 'https://blackboard.fhsu.edu/'
+            'Staging': 'bb_url',
+            'Production': 'bb_url'
         }
 
         self.server_url = learn_urls['Staging']
@@ -87,7 +87,7 @@ class Blackboard(object):
             },
             "name": {
                 "given": "Students",
-                "family": "MDC Banking Institute",
+                "family": ",
             }
 
         }
