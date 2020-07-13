@@ -1,4 +1,7 @@
 # flask-bb
+
+Bb Devcon Presentation 2020 - Integrating Bb REST APIs to the existing Flask Framework
+
 This is Blackboard Flask Web application that has integrated with Blackboard Rest APIs. The flask application is using a blog template from A Python Master named Corey Shaffer. 
 His Flask code here -  https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog
 
