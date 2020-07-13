@@ -15,3 +15,5 @@ Batch Add Instructor - Batch add instructor to the multiple courses
 Batch Course Copy - Batch Course Copy to the existing course or the new course
 
 Course Merge - Merge courses together
+
+Use Flask-Admin for User management
