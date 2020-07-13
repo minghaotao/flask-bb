@@ -11,7 +11,7 @@ from flask_admin import Admin
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '9b5d1b2a5a02c837aecabf4849310efa'
+app.config['SECRET_KEY'] = ''
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 admin = Admin(app, name='Admin',template_mode='bootstrap3')
@@ -23,8 +23,8 @@ login_manger.login_message_category = 'info'
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'bbworkatfhsu@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Blackboard@Fhsu!'
+app.config['MAIL_USERNAME'] = ''
+app.config['MAIL_PASSWORD'] = ''
 mail = Mail(app)
 
 
